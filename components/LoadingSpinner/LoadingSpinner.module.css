@@ -1,0 +1,11 @@
+.container {
+  margin: auto;
+  width: fit-content;
+  padding: 5rem;
+}
+
+.container svg{
+  width: 30px;
+  height: 30px;
+  fill: #ccc;
+};

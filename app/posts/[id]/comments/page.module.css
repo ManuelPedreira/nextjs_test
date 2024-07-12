@@ -1,0 +1,40 @@
+.container {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: last baseline;
+  gap: 1rem;
+}
+
+.header p {
+  margin: 0;
+}
+
+.name {
+  text-transform: capitalize;
+  color: #ccc
+}
+
+.email {
+  font-weight: 600;
+}
+
+.body {
+  background-color: #222;
+  border-radius: 5px;
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+}
+
+.body:first-letter {
+  text-transform: uppercase;
+}

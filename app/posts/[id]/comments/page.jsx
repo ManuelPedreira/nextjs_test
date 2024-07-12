@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./page.module.css";
 
 const fetchCommentsById = async (id) => {
   //await new Promise(resolve => setTimeout(resolve, 2000));
@@ -13,25 +14,32 @@ export default async function Comments({ params }) {
   const comments = await fetchCommentsById(id);
 
   return (
-    <ul
-      style={{
+    <div
+      className={styles.container}
+      /*       style={{
         fontSize: "12px",
         backgroundColor: "#222",
         padding: "1rem 3rem",
         borderRadius: "5px",
-      }}
+      }} */
     >
       {comments.map(({ id, name, email, body }) => (
-        <li key={id}>
-          <Image src={`https://api.dicebear.com/9.x/notionists/svg?seed=${email}`}
-          alt={email}
-          width={200}
-          height={200} 
-          />
-          <h1>{`${name} - ${email}`}</h1>
-          <p>{body}</p>
-        </li>
+        <article key={id}>
+          <div className={styles.header}>
+            <Image
+              src={`https://api.dicebear.com/9.x/notionists/svg?seed=${email}`}
+              alt={email}
+              width={50}
+              height={50}
+            />
+            <div>
+              <p className={styles.name}>{name}</p>
+              <p className={styles.email}>{email}</p>
+            </div>
+          </div>
+          <p className={styles.body}>{body}</p>
+        </article>
       ))}
-    </ul>
+    </div>
   );
 }

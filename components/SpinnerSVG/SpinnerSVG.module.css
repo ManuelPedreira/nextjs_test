@@ -1,0 +1,10 @@
+@keyframes spinner_effect {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner_svg {
+  transform-origin: center;
+  animation: spinner_effect 0.75s infinite linear;
+}

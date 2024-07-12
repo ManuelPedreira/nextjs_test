@@ -1,5 +1,7 @@
 "use client"
 
+import ErrorPlaceholder from "@/components/ErrorPlaceholder"
+
 export default function ErrorComments() {
-  return <p>ERROR!</p>
+  return <ErrorPlaceholder/>
 }
